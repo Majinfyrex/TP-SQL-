@@ -28,10 +28,10 @@ CREATE TABLE IF NOT EXISTS BON (
 
 DROP TABLE IF EXISTS COMPO;
 CREATE TABLE IF NOT EXISTS COMPO (
-    ID INT PRIMARY KEY,
-    ID_ART int(11),
-    ID_BON int(11),
-    QTE int(11)
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    ID_ART int,
+    ID_BON int,
+    QTE int
 );
 
 -- Mettre la foreign key de article
