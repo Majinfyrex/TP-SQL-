@@ -1,0 +1,31 @@
+CREATE DATABASE IF NOT EXISTS compta;
+
+USE compta;
+
+CREATE TABLE IF NOT EXISTS ARTICLE (
+    ID int(11),
+    REF VARCHAR(13),
+    DESIGNATION VARCHAR(255),
+    PRIX DECIMAL(7.2),
+    IF_FOU int(11)
+);
+
+CREATE TABLE IF NOT EXISTS FOURNISSEUR (
+    ID int(11),
+    NOM VARCHAR(25),
+);
+
+CREATE TABLE IF NOT EXISTS BON (
+    ID int(11),
+    NUMERO int(11),
+    DATE_CMDE DATETIME,
+    DELAI int(11),
+    ID_FOU int(11)
+);
+
+CREATE TABLE IF NOT EXISTS COMPO (
+    ID int(11),
+    ID_ART int(11),
+    ID_BON int(11),
+    QTE int(11)
+);
